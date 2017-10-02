@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Server</ion-label>
+      <ion-input placeholder="server IP" [(ngModel)]="server" (ionChange)="serverChange()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Port</ion-label>
+      <ion-input placeholder="Port number" [(ngModel)]="port" (ionChange)="portChange()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Location</ion-label>
+      <ion-toggle [(ngModel)]="locationEnabled" (ionChange)="locationEnabledChange()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
